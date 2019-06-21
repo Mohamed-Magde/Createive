@@ -1,0 +1,66 @@
+.portfolio {
+  width: 100vw;
+  height: 50%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+
+
+
+  &-item {
+
+
+    position: relative;
+
+    &-caption {
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 0;
+      background-color: rgba($orange, 0.9);
+      transition: all 0.5s;
+
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 1em;
+
+      p {
+        color: rgba(255, 255, 255, .5) !important;
+      }
+
+      .heading-4 {
+        font-size: 1.5rem;
+        text-transform: capitalize;
+      }
+
+    }
+
+    &:hover &-caption {
+      height: 105%;
+      opacity: 1;
+
+    }
+
+
+
+    img {
+      object-fit: fill;
+      margin-bottom: -1em;
+
+    }
+  }
+
+
+}
+
+
+
+
+
+
+$orange: #f4623a !default;
+$brown: #5c4d42 !default;
